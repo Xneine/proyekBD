@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+
+<MenuBar xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.menuController">
+   <menus>
+      <Menu text="Costumer">
+         <items>
+            <MenuItem fx:id="changeSceneMenuItem" onAction="#changeSceneToAddCostumer" text="Add Costumer" />
+            <MenuItem text="View Costumer" />
+         </items>
+      </Menu>
+      <Menu text="Order">
+         <items>
+            <MenuItem fx:id="changeSceneMenuItem2" onAction="#changeSceneToAddOrder" text="Add Order" />
+            <MenuItem text="View Order" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Detail Order">
+        <items>
+          <MenuItem fx:id="changeSceneMenuItem3" mnemonicParsing="false" onAction="#changeSceneToAddDetailOrder" text="AddDetailOrder" />
+        </items>
+      </Menu>
+      <Menu text="Payment">
+         <items>
+            <MenuItem text="Add Payment" />
+            <MenuItem text="View Payment" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Promo">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Add Promo" />
+            <MenuItem mnemonicParsing="false" text="View Promo" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Delivery">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Add Delivery" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Category">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Order List">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+         </items>
+      </Menu>
+   </menus>
+</MenuBar>
