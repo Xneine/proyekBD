@@ -20,6 +20,8 @@ public class menuController {
     @FXML
     public MenuItem changeSceneMenuItem4;
     @FXML
+    public MenuItem changeSceneMenuItem5;
+    @FXML
     public void changeSceneToAddCostumer(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addCostumer.fxml"));
@@ -53,7 +55,26 @@ public class menuController {
             e.printStackTrace();
         }
     }
+
     @FXML
+    public void changeSceneToUpdateDeleteCustomer(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/updateDeleteCustomer.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            changeSceneMenuItem5.getParentPopup().getOwnerWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+        @FXML
     public void changeSceneToAddOrder(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addOrder.fxml"));

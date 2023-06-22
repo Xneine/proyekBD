@@ -37,6 +37,8 @@ public class addCustomerController implements Initializable {
 
     @FXML
     private TextField teleponField;
+    @FXML
+    private TextField searchCustomerId;
 
     @FXML
     private Button addButton;
@@ -83,6 +85,72 @@ public class addCustomerController implements Initializable {
                 try {
                     executeQuery(addQuery);
                     clearField();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }else {
+                alert.close();
+            }
+        }
+    }
+
+    public void updateCustomer(){
+        if(namaField.getText().equals("") || alamatField.getText().equals("") || teleponField.getText().equals("")){
+            Alert alert =  new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Error");
+            alert.setHeight(100);
+            alert.setContentText("Data tidak ditemukan, harap input kembali!");
+            alert.setTitle("Error");
+            alert.showAndWait();
+            doNothing();
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation");
+            alert.setHeaderText("Update");
+            alert.setContentText("Are You Sure Want to Update?");
+            alert.showAndWait();
+            ButtonType buttonType = alert.getResult();
+            if (buttonType == ButtonType.OK){
+                String query = "update customer set customer_name = '"+namaField.getText()+"', customer_address = '"+alamatField.getText()+"', customer_phone_number = '"+teleponField.getText()+
+                        "' where customer_id = "+ searchCustomerId.getText()+"";
+                try {
+                    executeQuery(query);
+                    clearField();
+                    clearFieldId();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }else {
+                alert.close();
+            }
+        }
+    }
+
+    public void deleteCustomer(){
+        if(searchCustomerId.getText().equals("")){
+            Alert alert =  new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Error");
+            alert.setHeight(100);
+            alert.setContentText("Data tidak ditemukan, harap input kembali!");
+            alert.setTitle("Error");
+            alert.showAndWait();
+            doNothing();
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation");
+            alert.setHeaderText("Delete");
+            alert.setContentText("Are You Sure Want to Update?");
+            alert.showAndWait();
+            ButtonType buttonType = alert.getResult();
+            if (buttonType == ButtonType.OK){
+                String query = "DELETE FROM customer WHERE customer_id = "+ searchCustomerId.getText()+"";
+                executeQuery(query);
+                try {
+                    executeQuery(query);
+                    clearField();
+                    clearFieldId();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -162,6 +230,9 @@ public class addCustomerController implements Initializable {
         namaField.setText("");
         alamatField.setText("");
         teleponField.setText("");
+    }
+    public void clearFieldId(){
+        searchCustomerId.setText("");
     }
 
 }

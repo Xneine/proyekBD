@@ -4,10 +4,11 @@
 
 <MenuBar xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.menuController">
    <menus>
-      <Menu text="Costumer">
+      <Menu text="Customer">
          <items>
-            <MenuItem fx:id="changeSceneMenuItem" onAction="#changeSceneToAddCostumer" text="Add Costumer" />
-            <MenuItem fx:id="changeSceneMenuItem4" onAction="#changeSceneToCustomerTable" text="View Costumer" />
+            <MenuItem fx:id="changeSceneMenuItem" onAction="#changeSceneToAddCostumer" text="Add Customer" />
+            <MenuItem fx:id="changeSceneMenuItem4" onAction="#changeSceneToCustomerTable" text="View Customer" />
+            <MenuItem fx:id="changeSceneMenuItem5" mnemonicParsing="false" onAction="#changeSceneToUpdateDeleteCustomer" text="Edit Customer" />
          </items>
       </Menu>
       <Menu text="Order">
