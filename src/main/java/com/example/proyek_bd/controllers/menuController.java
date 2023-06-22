@@ -1,4 +1,4 @@
-package com.example.proyek_bd;
+package com.example.proyek_bd.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,9 +18,11 @@ public class menuController {
     @FXML
     public MenuItem changeSceneMenuItem3;
     @FXML
+    public MenuItem changeSceneMenuItem4;
+    @FXML
     public void changeSceneToAddCostumer(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("addCostumer.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addCostumer.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
@@ -35,9 +37,26 @@ public class menuController {
         }
     }
     @FXML
+    public void changeSceneToCustomerTable(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/customerTable.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            changeSceneMenuItem4.getParentPopup().getOwnerWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
     public void changeSceneToAddOrder(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("addOrder.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addOrder.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
@@ -54,7 +73,7 @@ public class menuController {
     @FXML
     public void changeSceneToAddDetailOrder(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("addDetailOrder.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addDetailOrder.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();

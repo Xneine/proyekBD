@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.*?>
 
-<MenuBar xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.menuController">
+<MenuBar xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.menuController">
    <menus>
       <Menu text="Costumer">
          <items>
             <MenuItem fx:id="changeSceneMenuItem" onAction="#changeSceneToAddCostumer" text="Add Costumer" />
-            <MenuItem text="View Costumer" />
+            <MenuItem fx:id="changeSceneMenuItem4" onAction="#changeSceneToCustomerTable" text="View Costumer" />
          </items>
       </Menu>
       <Menu text="Order">

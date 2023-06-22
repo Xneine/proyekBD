@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.DatePicker?>
-<AnchorPane prefHeight="471.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.addOrderController">
+<AnchorPane prefHeight="471.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.addOrderController">
     <fx:include source="hello-view.fxml" />
 
     <VBox alignment="CENTER" layoutX="24.0" layoutY="30.0" prefHeight="426.0" prefWidth="482.0" spacing="10">

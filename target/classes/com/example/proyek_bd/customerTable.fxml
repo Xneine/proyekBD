@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="394.0" prefWidth="527.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.addCustomerController">
+    <fx:include source="hello-view.fxml" />
+   <TableView fx:id="table_service" layoutY="29.0" prefHeight="320.0" prefWidth="532.0">
+     <columns>
+       <TableColumn fx:id="customerId_column" text="Customer ID" />
+       <TableColumn fx:id="name_column" prefWidth="143.0" text="Name" />
+       <TableColumn fx:id="alamat_column" prefWidth="157.0" text="Address" />
+       <TableColumn fx:id="telepon_column" minWidth="0.0" prefWidth="151.0" text="Phone Number" />
+     </columns>
+   </TableView>
+   <Button fx:id="refreshButton" layoutX="211.0" layoutY="358.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="101.0" onAction="#tableView" text="Refresh" />
+
+
+</AnchorPane>

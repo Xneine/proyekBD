@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="471.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.addDetailOrderController">
+<AnchorPane prefHeight="471.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.addDetailOrderController">
     <fx:include source="hello-view.fxml" />
 
     <VBox alignment="CENTER" layoutX="17.0" layoutY="32.0" prefHeight="286.0" prefWidth="500.0" spacing="10">
