@@ -33,14 +33,6 @@ public class addOrderController {
 
     @FXML
     private void addData() {
-        // Mendapatkan nilai tanggal yang dipilih
-        LocalDate selectedDate = tanggalPicker.getValue();
-
-        // Mendapatkan nilai-nilai lainnya
-        String costumer = costumerChoiceBox.getValue();
-        String service = serviceChoiceBox.getValue();
-        String distance = distanceChoiceBox.getValue();
-        String keterangan = keteranganTextArea.getText();
 
     }
 }
