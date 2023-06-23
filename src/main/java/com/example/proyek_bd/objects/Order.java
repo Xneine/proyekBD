@@ -10,5 +10,10 @@ public class Order {
     private ObservableList<Service> listService;
     private Date orderDate;
 
-
+    public Order(int order_id, Customer customer, ObservableList<Service> listService, Date orderDate) {
+        this.order_id = order_id;
+        this.customer = customer;
+        this.listService = listService;
+        this.orderDate = orderDate;
+    }
 }

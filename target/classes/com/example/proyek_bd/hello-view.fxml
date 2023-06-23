@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 
-<MenuBar xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.menuController">
+<MenuBar xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.menuController">
    <menus>
       <Menu text="Customer">
          <items>
@@ -27,6 +29,13 @@
             <MenuItem text="Add Payment" />
             <MenuItem text="View Payment" />
          </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Service">
+        <items>
+          <MenuItem fx:id="changeSceneMenuItem6" mnemonicParsing="false" onAction="#changeSceneToAddService" text="add Service" />
+            <MenuItem fx:id="changeSceneMenuItem7" mnemonicParsing="false" onAction="#changeSceneToServiceTable" text="view" />
+            <MenuItem fx:id="changeSceneMenuItem8" mnemonicParsing="false" onAction="#changeSceneToUpdateDeleteService" text="edit and delete" />
+        </items>
       </Menu>
       <Menu mnemonicParsing="false" text="Promo">
          <items>

@@ -22,6 +22,16 @@ public class menuController {
     @FXML
     public MenuItem changeSceneMenuItem5;
     @FXML
+    public MenuItem changeSceneMenuItem6;
+    @FXML
+    public MenuItem changeSceneMenuItem7;
+    @FXML
+    public MenuItem changeSceneMenuItem8;
+    @FXML
+    public MenuItem changeSceneMenuItem9;
+    @FXML
+    public MenuItem changeSceneMenuItem10;
+    @FXML
     public void changeSceneToAddCostumer(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addCostumer.fxml"));
@@ -104,6 +114,57 @@ public class menuController {
             stage.show();
 
             changeSceneMenuItem3.getParentPopup().getOwnerWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void changeSceneToAddService(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addService.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            changeSceneMenuItem6.getParentPopup().getOwnerWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void changeSceneToUpdateDeleteService(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/updateDeleteService.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            changeSceneMenuItem8.getParentPopup().getOwnerWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void changeSceneToServiceTable(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/serviceTable.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            changeSceneMenuItem7.getParentPopup().getOwnerWindow().hide();
         } catch (IOException e) {
             e.printStackTrace();
         }

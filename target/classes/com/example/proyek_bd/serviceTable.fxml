@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.addServiceController">
+    <fx:include source="hello-view.fxml" />
+    <TableView fx:id="table_service" layoutX="34.0" layoutY="29.0" prefHeight="320.0" prefWidth="532.0">
+        <columns>
+            <TableColumn fx:id="service_id_tb" prefWidth="270.4000244140625" text="Service id" />
+            <TableColumn fx:id="service_category_tb" prefWidth="261.5999755859375" text="Category" />
+        </columns>
+    </TableView>
+    <Button fx:id="refreshButton" layoutX="249.0" layoutY="360.0" mnemonicParsing="false" onAction="#refreshTableView" prefHeight="23.0" prefWidth="101.0" text="Refresh" />
+
+
+</AnchorPane>
