@@ -16,19 +16,30 @@
       <Menu text="Order">
          <items>
             <MenuItem fx:id="changeSceneMenuItem2" onAction="#changeSceneToAddOrder" text="Add Order" />
-            <MenuItem text="View Order" />
+            <MenuItem fx:id="changeSceneMenuItem9" text="View Order" />
+            <MenuItem fx:id="changeSceneMenuItem10" mnemonicParsing="false" text="Update Order" />
          </items>
       </Menu>
       <Menu mnemonicParsing="false" text="Detail Order">
         <items>
           <MenuItem fx:id="changeSceneMenuItem3" mnemonicParsing="false" onAction="#changeSceneToAddDetailOrder" text="AddDetailOrder" />
+            <MenuItem mnemonicParsing="false" text="View" />
+            <MenuItem mnemonicParsing="false" text="Update" />
         </items>
       </Menu>
       <Menu text="Payment">
          <items>
             <MenuItem text="Add Payment" />
-            <MenuItem text="View Payment" />
+            <MenuItem text="View" />
+            <MenuItem mnemonicParsing="false" text="Update" />
          </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Order List">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Add Item" />
+            <MenuItem mnemonicParsing="false" text="View " />
+            <MenuItem mnemonicParsing="false" text="Update delete" />
+        </items>
       </Menu>
       <Menu mnemonicParsing="false" text="Service">
         <items>
@@ -41,21 +52,21 @@
          <items>
             <MenuItem mnemonicParsing="false" text="Add Promo" />
             <MenuItem mnemonicParsing="false" text="View Promo" />
+            <MenuItem mnemonicParsing="false" text="update delete" />
          </items>
       </Menu>
       <Menu mnemonicParsing="false" text="Delivery">
          <items>
             <MenuItem mnemonicParsing="false" text="Add Delivery" />
+            <MenuItem mnemonicParsing="false" text="view " />
+            <MenuItem mnemonicParsing="false" text="update delete" />
          </items>
       </Menu>
       <Menu mnemonicParsing="false" text="Category">
          <items>
-            <MenuItem mnemonicParsing="false" text="Action 1" />
-         </items>
-      </Menu>
-      <Menu mnemonicParsing="false" text="Order List">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Add category" />
+            <MenuItem mnemonicParsing="false" text="view" />
+            <MenuItem mnemonicParsing="false" text="update delete" />
          </items>
       </Menu>
    </menus>

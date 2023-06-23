@@ -9,11 +9,10 @@
     <fx:include source="hello-view.fxml" />
     <TableView fx:id="table_service" layoutX="34.0" layoutY="29.0" prefHeight="320.0" prefWidth="533.0">
         <columns>
-            <TableColumn fx:id="ordedr_id_tb" prefWidth="139.20001220703125" text="Service id" />
-            <TableColumn fx:id="order_date_tb" minWidth="0.0" text="Category" />
-            <TableColumn fx:id="costumer_id_tb" prefWidth="577.6000366210938" text="Category" />
-            <TableColumn fx:id="service_id" prefWidth="261.5999755859375" text="Category" />
-            <TableColumn fx:id="condition" prefWidth="261.5999755859375" text="Category" />
+            <TableColumn fx:id="order_id_tb" prefWidth="139.20001220703125" text="ORDER ID" />
+            <TableColumn fx:id="order_date_tb" minWidth="0.0" text="ORDER DATE" />
+            <TableColumn fx:id="costumer_id_tb" prefWidth="577.6000366210938" text="COSTUMER ID" />
+            <TableColumn fx:id="condition" prefWidth="261.5999755859375" text="CATEGORY" />
         </columns>
     </TableView>
     <Button fx:id="refreshButton" layoutX="249.0" layoutY="360.0" mnemonicParsing="false" onAction="#showOrder" prefHeight="23.0" prefWidth="101.0" text="Refresh" />

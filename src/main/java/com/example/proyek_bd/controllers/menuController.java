@@ -32,6 +32,27 @@ public class menuController {
     @FXML
     public MenuItem changeSceneMenuItem10;
     @FXML
+    public MenuItem changeSceneMenuItem11;
+    @FXML
+    public MenuItem changeSceneMenuItem12;
+    @FXML
+    public MenuItem changeSceneMenuItem13;
+    @FXML
+    public MenuItem changeSceneMenuItem14;
+    @FXML
+    public MenuItem changeSceneMenuItem15;
+    @FXML
+    public MenuItem changeSceneMenuItem16;
+    @FXML
+    public MenuItem changeSceneMenuItem17;
+    @FXML
+    public MenuItem changeSceneMenuItem18;
+    @FXML
+    public MenuItem changeSceneMenuItem19;
+    @FXML
+    public MenuItem changeSceneMenuItem20;
+
+    @FXML
     public void changeSceneToAddCostumer(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addCostumer.fxml"));
@@ -84,7 +105,7 @@ public class menuController {
         }
     }
 
-        @FXML
+    @FXML
     public void changeSceneToAddOrder(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addOrder.fxml"));
@@ -102,6 +123,41 @@ public class menuController {
         }
     }
     @FXML
+    public void changeSceneToViewOrder(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/viewOrder.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+
+            Scene scene = new Scene(root);
+
+            stage.setScene(scene);
+            stage.show();
+
+            changeSceneMenuItem9.getParentPopup().getOwnerWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void changeSceneToUpdateOrder(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/updateDeleteOrder.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            changeSceneMenuItem10.getParentPopup().getOwnerWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
     public void changeSceneToAddDetailOrder(ActionEvent actionEvent) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addDetailOrder.fxml"));
@@ -114,6 +170,40 @@ public class menuController {
             stage.show();
 
             changeSceneMenuItem3.getParentPopup().getOwnerWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void changeSceneToViewDetailOrder(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addOrder.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            changeSceneMenuItem2.getParentPopup().getOwnerWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void changeSceneToUpdateDetailOrder(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyek_bd/addOrder.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+            changeSceneMenuItem2.getParentPopup().getOwnerWindow().hide();
         } catch (IOException e) {
             e.printStackTrace();
         }
