@@ -77,16 +77,14 @@ public class addOrderController {
 
     private void populateServiceChoiceBox() {
         try {
-            String query = "SELECT * FROM service";
+            String query = "SELECT service_id, service_category FROM service";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
-
             while (resultSet.next()) {
                 int service_id = resultSet.getInt("service_id");
                 String service_category = resultSet.getString("service_category");
-                costumerChoiceBox.getItems().add(service_id + " - " + service_category);
+                serviceChoiceBox.getItems().add(service_id + " - " + service_category);
             }
-
             statement.close();
             resultSet.close();
         } catch (SQLException e) {
@@ -96,15 +94,16 @@ public class addOrderController {
 
     private void populateDistanceChoiceBox() {
         try {
-            String query = "SELECT delivery_radius FROM distance";
+            String query = "SELECT delivery_id, delivery_radius, delivery_price FROM delivery";
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
                 int deliveryRadius = resultSet.getInt("delivery_radius");
-                distanceChoiceBox.getItems().add(String.valueOf(deliveryRadius));
+                int deliveryId = resultSet.getInt("delivery_id");
+                int deliveryPrice = resultSet.getInt("delivery_price");
+                distanceChoiceBox.getItems().add(String.valueOf( deliveryRadius+ " - " + deliveryPrice));
             }
-
             statement.close();
             resultSet.close();
         } catch (SQLException e) {
@@ -117,11 +116,10 @@ public class addOrderController {
         String costumerChoice = costumerChoiceBox.getValue();
         String serviceChoice = serviceChoiceBox.getValue();
         Date date = Date.valueOf(tanggalPicker.getValue());
-        int distanceChoice = Integer.parseInt(distanceChoiceBox.getValue());
         String keterangan = keteranganTextArea.getText();
 
         try {
-            String query = "INSERT INTO orders (costumer_id, service_id, order_date, condition) " +
+            String query = "INSERT INTO orders (customer_id, service_id, order_date, condition) " +
                     "VALUES (?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
 
@@ -148,11 +146,15 @@ public class addOrderController {
             } else {
                 System.out.println("Failed to insert data!");
             }
-
             statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public void showOrder(){
+
     }
 }
 

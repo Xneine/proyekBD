@@ -123,41 +123,6 @@ public class addServiceController {
             e.printStackTrace();
         }
     }
-    ////////////////////////////////////////////
-    @FXML
-    public void initialize() {
-        service_id_tb.setCellValueFactory(new PropertyValueFactory<>("serviceId"));
-        service_category_tb.setCellValueFactory(new PropertyValueFactory<>("serviceCategory"));
-        loadData();
-    }
-
-    private void loadData() {
-        try {
-            String query = "SELECT * FROM service";
-            PreparedStatement statement = connection.prepareStatement(query);
-            ResultSet resultSet = statement.executeQuery();
-
-            while (resultSet.next()) {
-                int serviceId = resultSet.getInt("service_id");
-                String serviceCategory = resultSet.getString("service_category");
-
-                Service service = new Service(serviceId, serviceCategory);
-                table_service.getItems().add(service);
-            }
-
-            resultSet.close();
-            statement.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    public void refreshTableView() {
-        table_service.getItems().clear();
-        loadData();
-    }
-
     //////////////////
     public ObservableList<Service> getServiceList(){
         ObservableList<Service> list = FXCollections.observableArrayList();
@@ -179,10 +144,11 @@ public class addServiceController {
         return list;
     }
 
-    private void showService(){
+    @FXML
+    private void showService() {
         ObservableList<Service> list = getServiceList();
-        service_id_tb.setCellValueFactory(new PropertyValueFactory<>("Service id"));
-        service_category_tb.setCellValueFactory(new PropertyValueFactory<>("Category"));
+        service_id_tb.setCellValueFactory(new PropertyValueFactory<>("service_id"));
+        service_category_tb.setCellValueFactory(new PropertyValueFactory<>("service_category"));
         table_service.setItems(list);
     }
 }

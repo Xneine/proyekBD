@@ -13,7 +13,7 @@
             <TableColumn fx:id="service_category_tb" prefWidth="261.5999755859375" text="Category" />
         </columns>
     </TableView>
-    <Button fx:id="refreshButton" layoutX="249.0" layoutY="360.0" mnemonicParsing="false" onAction="#refreshTableView" prefHeight="23.0" prefWidth="101.0" text="Refresh" />
+    <Button fx:id="refreshButton" layoutX="249.0" layoutY="360.0" mnemonicParsing="false" onAction="#showService" prefHeight="23.0" prefWidth="101.0" text="Refresh" />
 
 
 </AnchorPane>
