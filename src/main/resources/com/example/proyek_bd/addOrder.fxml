@@ -8,15 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="471.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.addOrderController">
+<AnchorPane prefHeight="471.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.addOrderController">
     <fx:include source="hello-view.fxml" />
 
-    <VBox alignment="CENTER" layoutX="24.0" layoutY="30.0" prefHeight="426.0" prefWidth="482.0" spacing="10">
+    <VBox alignment="CENTER" layoutX="53.0" layoutY="44.0" prefHeight="426.0" prefWidth="482.0" spacing="10">
         <Label text="Data Customer:" />
         <ChoiceBox fx:id="costumerChoiceBox" prefHeight="26.0" prefWidth="258.0" />
-
-        <Label text="Service:" />
-        <ChoiceBox fx:id="serviceChoiceBox" prefHeight="26.0" prefWidth="266.0" />
 
         <Label text="Distance:" />
         <ChoiceBox fx:id="distanceChoiceBox" prefHeight="26.0" prefWidth="268.0" />

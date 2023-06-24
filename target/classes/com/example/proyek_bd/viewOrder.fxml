@@ -5,14 +5,15 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.addOrderController">
+<AnchorPane prefHeight="400.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.viewOrderController">
     <fx:include source="hello-view.fxml" />
-    <TableView fx:id="table_service" layoutX="34.0" layoutY="29.0" prefHeight="320.0" prefWidth="533.0">
+    <TableView fx:id="table_order" layoutX="44.0" layoutY="34.0" prefHeight="320.0" prefWidth="502.0">
         <columns>
-            <TableColumn fx:id="order_id_tb" prefWidth="139.20001220703125" text="ORDER ID" />
-            <TableColumn fx:id="order_date_tb" minWidth="0.0" text="ORDER DATE" />
-            <TableColumn fx:id="costumer_id_tb" prefWidth="577.6000366210938" text="COSTUMER ID" />
-            <TableColumn fx:id="condition" prefWidth="261.5999755859375" text="CATEGORY" />
+            <TableColumn fx:id="order_id_tb" prefWidth="76.79998779296875" text="ORDER ID" />
+            <TableColumn fx:id="order_date_tb" minWidth="0.0" prefWidth="108.79998016357422" text="ORDER DATE" />
+            <TableColumn fx:id="costumer_id_tb" prefWidth="110.39996337890625" text="COSTUMER ID" />
+            <TableColumn fx:id="category_id_tb" prefWidth="120.0" text="CONDITONS" />
+            <TableColumn fx:id="delivery_id_tb" prefWidth="84.00003051757812" text="DELIVERY ID" />
         </columns>
     </TableView>
     <Button fx:id="refreshButton" layoutX="249.0" layoutY="360.0" mnemonicParsing="false" onAction="#showOrder" prefHeight="23.0" prefWidth="101.0" text="Refresh" />

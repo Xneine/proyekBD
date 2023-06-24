@@ -4,7 +4,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 
-<MenuBar xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.menuController">
+<MenuBar xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyek_bd.controllers.menuController">
    <menus>
       <Menu text="Customer">
          <items>
@@ -16,8 +16,8 @@
       <Menu text="Order">
          <items>
             <MenuItem fx:id="changeSceneMenuItem2" onAction="#changeSceneToAddOrder" text="Add Order" />
-            <MenuItem fx:id="changeSceneMenuItem9" text="View Order" />
-            <MenuItem fx:id="changeSceneMenuItem10" mnemonicParsing="false" text="Update Order" />
+            <MenuItem fx:id="changeSceneMenuItem9" onAction="#changeSceneToViewOrder" text="View Order" />
+            <MenuItem fx:id="changeSceneMenuItem10" mnemonicParsing="false" onAction="#changeSceneToUpdateOrder" text="Update Order" />
          </items>
       </Menu>
       <Menu mnemonicParsing="false" text="Detail Order">
